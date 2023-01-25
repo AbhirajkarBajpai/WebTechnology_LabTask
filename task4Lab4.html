@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+        main{
+            height:50%;
+            background-color: rgb(222, 234, 114);
+        } 
+        </style>
+    </head>
+    <body>
+        <main id="thisMain">
+            <h1>This is the main section.</h1>
+            <h2>This will be replaced After Button Clicked.</h2>
+        </main>
+        <div>
+            <h1>This is outside main.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quos in laboriosam aut laborum obcaecati voluptate repellat dolorum exercitationem architecto facere, doloremque accusantium officiis dolorem, repellendus id nobis veniam. Corrupti quas, beatae sed sequi numquam aliquam commodi quia nemo enim accusamus doloribus nobis hic atque veritatis, impedit excepturi, suscipit incidunt.</p>
+        </div>
+        <button onclick="changeMain()">Click me</button>
+
+        <script type="text/javascript">
+            changeMain= function (){
+                let myElement = document.querySelector("#thisMain");
+                myElement.innerHTML='<div><h1>This is the main section After Button Is Clicked.</h1><h1>Contents has been changed</h1></div>'
+                myElement.style.backgroundColor = "#005555";
+            }
+            
+        </script>
+    
+    </body>
+</html>
