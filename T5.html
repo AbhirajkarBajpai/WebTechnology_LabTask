@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="input1">
+      <input type="text" id="input2">
+      <br>
+      <button id="add">+</button>
+      <button id="subtract">-</button>
+      <button id="multiply">*</button>
+      <button id="divide">/</button>
+      <br>
+      <p id="result"></p>
+    </div>
+    <script>
+      const input1 = document.querySelector("#input1");
+      const input2 = document.querySelector("#input2");
+      const add = document.querySelector("#add");
+      const subtract = document.querySelector("#subtract");
+      const multiply = document.querySelector("#multiply");
+      const divide = document.querySelector("#divide");
+      const result = document.querySelector("#result");
+
+      add.addEventListener("click", function(){
+        const num1 = Number.parseInt(input1.value);
+        const num2 = Number.parseInt(input2.value);
+        result.innerText = `Result: ${num1 + num2}`;
+      });
+
+      subtract.addEventListener("click", function(){
+        const num1 = Number.parseInt(input1.value);
+        const num2 = Number.parseInt(input2.value);
+        result.innerText = `Result: ${num1 - num2}`;
+      });
+
+      multiply.addEventListener("click", function(){
+        const num1 = Number.parseInt(input1.value);
+        const num2 = Number.parseInt(input2.value);
+        result.innerText = `Result: ${num1 * num2}`;
+      });
+
+      divide.addEventListener("click", function(){
+        const num1 = Number.parseInt(input1.value);
+        const num2 = Number.parseInt(input2.value);
+        if(num2===0){
+            result.innerText = "Result: Infinity Or Undefined! , Number 2 Entrered is 0.";
+        }
+        else{
+            result.innerText = `Result: ${num1 / num2}`;
+        }
+      });
+    </script>
+  </body>
+</html>

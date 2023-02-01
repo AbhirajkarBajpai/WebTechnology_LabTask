@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #curr_num {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="increment">Increment</button>
+    <p id="curr_num">0</p>
+    <script>
+      const curr_num = document.querySelector("#curr_num");
+      const increment = document.querySelector("#increment");
+
+      increment.addEventListener("click", function(){
+        let currentcurr_num = parseInt(curr_num.textContent);
+        currentcurr_num++;
+        curr_num.textContent = currentcurr_num;
+        curr_num.style.fontSize = `${16 + currentcurr_num}px`;
+      });
+    </script>
+  </body>
+</html>

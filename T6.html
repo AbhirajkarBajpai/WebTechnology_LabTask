@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <table id="tab"></table>
+
+    <button onclick="makePage()">Click Here</button>
+    <script>
+        makePage= function(){
+
+            head= document.createElement('h1');
+            h1Cont= document.createTextNode("I am an H1");
+            head.appendChild(h1Cont);
+            document.body.appendChild(head);
+
+            para= document.createElement('p');
+            pCont= document.createTextNode("This is a paragraph followed by a list");
+            para.appendChild(pCont);
+            document.body.appendChild(para);
+
+            var ol = document.createElement("ol");
+            ol.setAttribute("type", "I");   
+
+            var li=document.createElement('li');
+            var liVal1= document.createTextNode("This is first");
+            li.appendChild(liVal1);
+            ol.appendChild(li);
+            
+            var li = document.createElement('li');
+            liVal2 = document.createTextNode("This is second");
+            li.appendChild(liVal2);
+            ol.appendChild(li);
+            
+            document.body.appendChild(ol);
+
+        }
+        
+    </script>
+</body>
+
+</html>

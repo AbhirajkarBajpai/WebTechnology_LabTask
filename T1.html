@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       h2 {
+        animation: spin 2s alternate infinite;
+      }
+      @keyframes spin {
+        from{
+          transform: rotateX(0deg);
+        }
+        To{
+          transform: rotateX(360deg);
+        }
+      
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="txt">Hello</h2>
+    <label>Enter The Text You Want To Display</label>
+    <br />
+    <input type="text" />
+    <br />
+    <button onclick="buttonHandler()">Change text</button>
+
+    <script>
+      buttonHandler = function () {
+        let val = document.querySelector("input").value;
+        document.querySelector(".txt").textContent = val;
+      };
+    </script>
+  </body>
+</html>
